@@ -1,21 +1,18 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import { TextField, IconButton, InputAdornment } from "@material-ui/core";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-
-import { AuthConsumer } from "../../stateHandlers/authContext";
-import { login } from "../../axios/services/auth";
 
 import { validateLogin } from "../../validators/auth";
 
 import styles from "./styles";
 
-const SignIn = (props) => {
+const SignIn = () => {
 	const classes = styles();
 	const [field, setField] = useState({ phone: "", password: "", showPassword: "" });
-	const [authenticated, setAuthenticated] = useState(false);
 	const [errors, setErrors] = useState({});
+	const history = useHistory();
 
 	const handleChange = (name) => (event) => {
 		setField({ ...field, [name]: event.target.value });
@@ -34,16 +31,8 @@ const SignIn = (props) => {
 			return;
 		}
 
-		login(data, (err, data) => {
-			if (err) console.error("error in login", err);
-			else {
-				props.login(data.user);
-				setAuthenticated(true);
-			}
-		});
+		history.push("/home");
 	};
-
-	if (authenticated) return <Redirect to={"/"} />;
 
 	return (
 		<div className={`${classes.root} ${classes.centered}`}>
@@ -85,15 +74,11 @@ const SignIn = (props) => {
 				/>
 
 				<div className={`${classes.btn} ${classes.centered}`} onClick={() => handleLogin()}>
-					login
+					Sign in
 				</div>
 			</div>
 		</div>
 	);
 };
 
-const ConsumerComponent = (props) => (
-	<AuthConsumer>{({ login }) => <SignIn {...props} login={login} />}</AuthConsumer>
-);
-
-export default ConsumerComponent;
+export default SignIn;

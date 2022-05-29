@@ -3,15 +3,16 @@ import { makeStyles } from "@material-ui/core";
 const styles = makeStyles((theme) => ({
 	root: {
 		width: "100%",
-		height: "100vh",
+		height: "100%",
 	},
 
 	txtField: {
 		marginBottom: "15px",
+		width: "50%",
 	},
 
 	content: {
-		height: "calc(100vh - 70px)",
+		height: "100%",
 		width: "100%",
 	},
 
@@ -24,7 +25,7 @@ const styles = makeStyles((theme) => ({
 	},
 
 	btn: {
-		background: theme.palette.colors.primary,
+		background: theme.palette.colors.iconRed,
 		color: "white",
 		width: "150px",
 		height: "50px",

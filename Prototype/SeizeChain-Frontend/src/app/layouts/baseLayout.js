@@ -7,7 +7,6 @@ import PrivateWrapper from "./privateWrapper";
 import ErrorBoundary from "../util/errorBoundary";
 
 import Loading from "../components/Loading";
-import SignIn from "../views/SignIn";
 const LandingPage = lazy(() => import("../views/LandingPage"));
 const Home = lazy(() => import("../views/Home"));
 const NotFound = lazy(() => import("../views/NotFound"));
@@ -22,6 +21,7 @@ const theme = createTheme({
 			primary: "grey",
 			secondary: "",
 			dark: "",
+			background: "#f2f2f2",
 			iconGrey: "#42434d",
 			iconRed: "#C85250",
 		},
@@ -37,6 +37,7 @@ const BaseLayout = () => (
 						<div>
 							<Switch>
 								<Route exact path="/" component={LandingPage} />
+								<Route exact path="/home" component={Home} />
 
 								<Route exact path="/admin/create" component={Create} />
 
@@ -45,7 +46,7 @@ const BaseLayout = () => (
 									path="/template"
 									render={(props) => <PrivateWrapper component={<Template {...props} />} />}
 								/>
-								<Route exact path="/signin" component={SignIn} />
+
 								<Route exact path="*" component={NotFound} />
 							</Switch>
 						</div>

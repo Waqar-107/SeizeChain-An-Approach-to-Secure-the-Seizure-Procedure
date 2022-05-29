@@ -5,36 +5,33 @@ const styles = makeStyles((theme) => ({
 		height: "100vh",
 		width: "100%",
 
+		position: "relative",
+	},
+
+	particleContainer: {
+		height: "100vh",
+		width: "100%",
+		position: "absolute",
+	},
+
+	contentContainer: {
+		height: "100vh",
+		width: "100%",
+		position: "absolute",
+
 		display: "flex",
+		flexDirection: "row",
 	},
 
 	left: {
 		width: "50%",
 		height: "100vh",
-
-		background: "green",
-		position: "relative",
 	},
 
 	right: {
 		width: "50%",
 		height: "100vh",
-		background: "cyan",
-	},
-
-	particleContainer: {
-		position: "absolute",
-		height: "100vh",
-		width: "100%",
-	},
-
-	logoContainer: {
-		position: "absolute",
-		height: "100%",
-		width: "100%",
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "center",
+		background: "rgb(242, 242, 242, 0.7)",
 	},
 
 	logo: {
@@ -47,17 +44,6 @@ const styles = makeStyles((theme) => ({
 		fontSize: 60,
 		fontWeight: "bold",
 		color: theme.palette.colors.iconGrey,
-	},
-
-	authButton: {
-		fontSize: 20,
-		fontWeight: "bold",
-		background: theme.palette.colors.iconRed,
-		color: theme.palette.colors.iconGrey,
-		borderRadius: 10,
-		marginTop: 20,
-		padding: "15px 35px",
-		cursor: "pointer",
 	},
 
 	centeredContainer: {
