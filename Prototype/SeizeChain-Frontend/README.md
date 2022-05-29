@@ -1,0 +1,1 @@
+# Web frontend for `SeizeChain: An Approach to Secure the Seizure Procedure`
