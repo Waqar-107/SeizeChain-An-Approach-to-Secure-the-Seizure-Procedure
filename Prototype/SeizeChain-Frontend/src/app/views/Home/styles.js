@@ -10,6 +10,11 @@ const styles = makeStyles((theme) => ({
 		width: "100%",
 		padding: "5%",
 	},
+
+	gridroot: {
+		width: "100%",
+		flexGrow: 1,
+	},
 }));
 
 export default styles;
