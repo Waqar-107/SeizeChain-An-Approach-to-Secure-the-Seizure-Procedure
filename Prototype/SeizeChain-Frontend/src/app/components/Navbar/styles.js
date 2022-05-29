@@ -4,7 +4,8 @@ const styles = makeStyles((theme) => ({
 	root: {
 		height: 70,
 		width: "100%",
-		background: theme.palette.colors.iconRed,
+		background: "white",
+		boxShadow: "0px 11px 11px -15px #000000",
 		padding: "10px 30px",
 
 		display: "flex",
@@ -37,17 +38,23 @@ const styles = makeStyles((theme) => ({
 	},
 
 	linkContainer: {
+		width: "25%",
+		height: "100%",
 		display: "flex",
-
-		"&:nth-child(0)": {},
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignContent: "center",
+		alignItems: "center",
 
 		fontWeight: "bold",
 		cursor: "pointer",
 	},
 
-	midChild: {
-		marginRight: 20,
-		marginLeft: 20,
+	activeLink: {
+		textDecoration: "underline",
+		textDecorationColor: theme.palette.colors.iconRed,
+		textDecorationThickness: 3,
+		textUnderlineOffset: "5px",
 	},
 }));
 

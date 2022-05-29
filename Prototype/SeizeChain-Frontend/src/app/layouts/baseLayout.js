@@ -37,7 +37,7 @@ const BaseLayout = () => (
 						<div>
 							<Switch>
 								<Route exact path="/" component={LandingPage} />
-								<Route exact path="/home" component={Home} />
+								<Route exact path="/dashboard" component={Home} />
 
 								<Route exact path="/admin/create" component={Create} />
 

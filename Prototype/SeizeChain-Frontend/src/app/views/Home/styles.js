@@ -2,7 +2,13 @@ import { makeStyles } from "@material-ui/core";
 
 const styles = makeStyles((theme) => ({
 	root: {
-		color: theme.palette.colors.primary,
+		width: "100%",
+		minHeight: "100vh",
+	},
+
+	contentContainer: {
+		width: "100%",
+		padding: "5%",
 	},
 }));
 

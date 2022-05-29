@@ -31,7 +31,7 @@ const SignIn = () => {
 			return;
 		}
 
-		history.push("/home");
+		history.push("/dashboard");
 	};
 
 	return (
