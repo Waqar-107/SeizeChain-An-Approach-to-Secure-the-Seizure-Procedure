@@ -15,13 +15,21 @@ const Navbar = (props) => {
 					src={Logo}
 					alt=""
 					className={classes.logo}
-					onClick={() => history.push("/daashboard")}
+					onClick={() => history.push("/dashboard")}
 				/>
 				<span className={classes.title}>SeizeChain</span>
 			</div>
 			<div className={classes.linkContainer}>
-				<div className={props.viewName === "dashboard" ? classes.activeLink : ""}>Dashboard</div>
-				<div className={props.viewName === "records" ? classes.activeLink : ""}>Records</div>
+				<div
+					className={props.viewName === "dashboard" ? classes.activeLink : ""}
+					onClick={() => history.push("/dashboard")}>
+					Dashboard
+				</div>
+				<div
+					className={props.viewName === "records" ? classes.activeLink : ""}
+					onClick={() => history.push("/records")}>
+					Records
+				</div>
 				<div className={props.viewName === "profile" ? classes.activeLink : ""}>Profile</div>
 				<div onClick={() => history.push("/")}>Logout</div>
 			</div>
