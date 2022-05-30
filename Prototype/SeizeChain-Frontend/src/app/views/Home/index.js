@@ -15,6 +15,7 @@ import {
 } from "chart.js";
 import { Bar, Pie, Line } from "react-chartjs-2";
 import data from "./data";
+import BangladeshiMap from "../../components/BangladeshiMap";
 import styles from "./styles";
 
 ChartJS.register(
@@ -36,6 +37,11 @@ const Home = () => {
 			<div className={classes.contentContainer}>
 				<div className={classes.gridroot}>
 					<Grid container spacing={5}>
+						<Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+							<div style={{ width: "100%" }}>
+								<BangladeshiMap />
+							</div>
+						</Grid>
 						<Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
 							<div style={{ width: "100%" }}>
 								<Bar options={data.currentYear.options} data={data.currentYear.data} />
