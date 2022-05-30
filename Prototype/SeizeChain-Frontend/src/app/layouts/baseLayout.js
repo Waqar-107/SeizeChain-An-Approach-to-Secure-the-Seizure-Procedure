@@ -25,6 +25,7 @@ const theme = createTheme({
 			background: "#f2f2f2",
 			iconGrey: "#42434d",
 			iconRed: "#C85250",
+			iconYellow: "#fed66b",
 		},
 	},
 });
