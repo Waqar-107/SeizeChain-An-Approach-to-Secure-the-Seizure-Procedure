@@ -33,12 +33,12 @@ const GenericTable = (props) => {
 	return (
 		<div className={classes.root}>
 			<div {...getTableProps()} id="tableScroll" className={classes.table}>
-				<div>
+				<div className={classes.headerCell}>
 					{headerGroups.map((headerGroup) => (
 						<div {...headerGroup.getHeaderGroupProps()} className={classes.row}>
 							{headerGroup.headers.map((column, idx) => (
 								<div
-									className={classes.singleCell}
+									className={`${classes.singleCell}`}
 									{...column.getHeaderProps()}
 									style={{ fontWeight: 600, width: widthList[idx] }}>
 									{column.render("Header")}

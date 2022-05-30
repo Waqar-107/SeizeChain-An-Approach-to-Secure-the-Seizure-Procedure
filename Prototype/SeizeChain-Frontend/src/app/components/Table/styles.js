@@ -5,7 +5,7 @@ const styles = (theme) => ({
 		background: theme.palette.colors.tableBody,
 		boxShadow: "0 25px 20px -20px rgba(0,0,0,.1), 0 0 15px rgba(0, 0, 0, .06)",
 
-		padding: 20,
+		paddingBottom: 20,
 	},
 
 	table: {
@@ -16,7 +16,7 @@ const styles = (theme) => ({
 	row: {
 		marginBottom: 10,
 		display: "inline-flex",
-		borderBottom: `1px solid ${theme.palette.colors.lightNavyBlue}`,
+		borderBottom: `1px solid ${theme.palette.colors.iconRed}`,
 	},
 
 	singleCell: {
@@ -31,6 +31,10 @@ const styles = (theme) => ({
 		flexDirection: "row",
 		alignItems: "center",
 		alignContent: "center",
+	},
+
+	headerCell: {
+		background: theme.palette.colors.iconRed,
 	},
 
 	pagination: {
