@@ -37,7 +37,14 @@ const styles = makeStyles((theme) => ({
 		color: theme.palette.colors.iconGrey,
 	},
 
-	linkContainer: {
+	activeLink: {
+		textDecoration: "underline",
+		textDecorationColor: theme.palette.colors.iconRed,
+		textDecorationThickness: 3,
+		textUnderlineOffset: "5px",
+	},
+
+	webNav: {
 		width: "25%",
 		height: "100%",
 		display: "flex",
@@ -48,13 +55,29 @@ const styles = makeStyles((theme) => ({
 
 		fontWeight: "bold",
 		cursor: "pointer",
+
+		[theme.breakpoints.down("md")]: {
+			display: "none",
+		},
+
+		[theme.breakpoints.up("md")]: {
+			display: "flex",
+		},
 	},
 
-	activeLink: {
-		textDecoration: "underline",
-		textDecorationColor: theme.palette.colors.iconRed,
-		textDecorationThickness: 3,
-		textUnderlineOffset: "5px",
+	mobileNav: {
+		height: "100%",
+		width: "100%",
+
+		position: "relative",
+
+		[theme.breakpoints.down("md")]: {
+			display: "flex",
+		},
+
+		[theme.breakpoints.up("md")]: {
+			display: "none",
+		},
 	},
 }));
 

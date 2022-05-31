@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import Logo from "../../assets/nodeLogo.png";
 import styles from "./styles";
 
@@ -19,7 +20,7 @@ const Navbar = (props) => {
 				/>
 				<span className={classes.title}>SeizeChain</span>
 			</div>
-			<div className={classes.linkContainer}>
+			<div className={classes.webNav}>
 				<div
 					className={props.viewName === "dashboard" ? classes.activeLink : ""}
 					onClick={() => history.push("/dashboard")}>
@@ -32,6 +33,9 @@ const Navbar = (props) => {
 				</div>
 				<div className={props.viewName === "profile" ? classes.activeLink : ""}>Profile</div>
 				<div onClick={() => history.push("/")}>Logout</div>
+			</div>
+			<div className={classes.mobileNav}>
+				<HamburgerMenu viewName={props.viewName} />
 			</div>
 		</div>
 	);
