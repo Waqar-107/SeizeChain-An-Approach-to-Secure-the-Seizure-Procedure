@@ -13,9 +13,17 @@ const styles = makeStyles((theme) => ({
 
 		display: "flex",
 		flexDirection: "column",
-		alignItems: "center",
-		justifyContent: "center",
-		alignItems: "center",
+		alignItems: "flex-start",
+	},
+
+	row: {
+		marginBottom: 15,
+	},
+
+	head: {
+		fontWeight: "bold",
+		marginRight: 10,
+		color: theme.palette.colors.iconRed,
 	},
 
 	createBtn: {
@@ -31,16 +39,10 @@ const styles = makeStyles((theme) => ({
 	},
 
 	img: {
-		marginBottom: 20,
-		[theme.breakpoints.down("md")]: {
-			width: "50%",
-			height: "auto",
-		},
-
-		[theme.breakpoints.up("md")]: {
-			width: 200,
-			height: "auto",
-		},
+		width: 100,
+		height: 100,
+		marginTop: 35,
+		marginBottom: 50,
 	},
 }));
 

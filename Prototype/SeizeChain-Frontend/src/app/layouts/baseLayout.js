@@ -15,6 +15,7 @@ const Records = lazy(() => import("../views/Records"));
 
 // patrol party
 const createByPatrolParty = lazy(() => import("../views/PatrolParty/Create"));
+const qrForPatrolParty = lazy(() => import("../views/PatrolParty/QR"));
 
 const theme = createTheme({
 	palette: {
@@ -43,6 +44,7 @@ const BaseLayout = () => (
 								<Route exact path="/records" component={Records} />
 
 								<Route exact path="/patrol-party/create" component={createByPatrolParty} />
+								<Route exact path="/patrol-party/qr" component={qrForPatrolParty} />
 
 								<Route
 									exact
