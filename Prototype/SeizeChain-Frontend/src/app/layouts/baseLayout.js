@@ -13,8 +13,8 @@ const NotFound = lazy(() => import("../views/NotFound"));
 const Template = lazy(() => import("../views/Template"));
 const Records = lazy(() => import("../views/Records"));
 
-// admin views
-const Create = lazy(() => import("../views/AdminViews/Create"));
+// patrol party
+const createByPatrolParty = lazy(() => import("../views/PatrolParty/Create"));
 
 const theme = createTheme({
 	palette: {
@@ -42,7 +42,7 @@ const BaseLayout = () => (
 								<Route exact path="/dashboard" component={Home} />
 								<Route exact path="/records" component={Records} />
 
-								<Route exact path="/admin/create" component={Create} />
+								<Route exact path="/patrol-party/create" component={createByPatrolParty} />
 
 								<Route
 									exact
