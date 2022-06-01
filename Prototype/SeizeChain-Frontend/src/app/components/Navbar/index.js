@@ -31,7 +31,7 @@ const Navbar = (props) => {
 					onClick={() => history.push("/records")}>
 					Records
 				</div>
-				<div className={props.viewName === "profile" ? classes.activeLink : ""}>Profile</div>
+				{/* <div className={props.viewName === "profile" ? classes.activeLink : ""}>Profile</div> */}
 				<div onClick={() => history.push("/")}>Logout</div>
 			</div>
 			<div className={classes.mobileNav}>
