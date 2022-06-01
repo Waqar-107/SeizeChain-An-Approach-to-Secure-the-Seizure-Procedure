@@ -17,6 +17,13 @@ const Records = lazy(() => import("../views/Records"));
 const createByPatrolParty = lazy(() => import("../views/PatrolParty/Create"));
 const qrForPatrolParty = lazy(() => import("../views/PatrolParty/QR"));
 
+// sector commander
+const scanQrCode = lazy(() => import("../views/SectorCommander/Scan"));
+const verify = lazy(() => import("../views/SectorCommander/Verify"));
+
+// dummy QR
+const dummyQR = lazy(() => import("../views/Dummy"));
+
 const theme = createTheme({
 	palette: {
 		colors: {
@@ -45,6 +52,11 @@ const BaseLayout = () => (
 
 								<Route exact path="/patrol-party/create" component={createByPatrolParty} />
 								<Route exact path="/patrol-party/qr" component={qrForPatrolParty} />
+
+								<Route exact path="/sector-commander/qr" component={scanQrCode} />
+								<Route exact path="/sector-commander/verify" component={verify} />
+
+								<Route exact path="/dummy-qr" component={dummyQR} />
 
 								<Route
 									exact
